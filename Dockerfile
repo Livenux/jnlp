@@ -1,4 +1,4 @@
-FROM jnlp/
+FROM debian
 
 ENV TZ=Asia/Shanghai
 RUN apt-get update && apt-get install -y tzdata apt-transport-https \
