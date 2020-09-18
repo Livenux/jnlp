@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y tzdata apt-transport-https \
     tee -a /etc/apt/sources.list.d/kubernetes.list && \ 
     apt-get update && apt-get install -y docker-ce-cli kubectl && \
     rm -rf /var/lib/apt/lists/*  && \
-    useradd -c "Jenkins user" -d $HOME  /home/jenkins jenkins && \
+    useradd -c "Jenkins user" -d /home/jenkins jenkins && \
     usermod -aG docker jenkins && \
     sed -i '/^root/a\jenkins    ALL=(ALL:ALL) NOPASSWD:ALL' /etc/sudoers && \ 
     mkdir -p  /home/jenkins/.jenkins /home/jenkins/agent /usr/share/jenkins /root/.kube 
